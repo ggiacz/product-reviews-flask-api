@@ -20,6 +20,7 @@ PRODUCT_NAME = ("SELECT name FROM products WHERE id = (%s);")
 PRODUCT_NUMBER_OF_REVIEWS = ("SELECT COUNT(*) FROM reviews WHERE product_id = (%s);")
 PRODUCT_AVERAGE_RATING = ("SELECT AVG(rating) as average FROM reviews WHERE product_id = (%s);")
 
+
 DELETE_PRODUCT = ("DELETE FROM products WHERE id = (%s);")
 
 # USE --> ALTER SEQUENCE produtos_id_seq RESTART WITH 1; <-- TO RESET SERIAL ID
@@ -109,8 +110,10 @@ def get_products():
         with connection.cursor() as cursor:
             cursor.execute("SELECT * FROM products;")
             products = cursor.fetchall()
+            products_names = [product[1] for product in products]
+
 #    return {"products": products}, 200
-    return render_template("index.html", products=products)
+    return render_template("index.html", products=products_names)
 
 # Rename Product
 # JSON Example: {"name": "New Product Name"}
