@@ -25,7 +25,7 @@ DELETE_PRODUCT = ("DELETE FROM products WHERE id = (%s);")
 
 # USE --> ALTER SEQUENCE produtos_id_seq RESTART WITH 1; <-- TO RESET SERIAL ID
 
-# Load .env file
+# Load .env file to get PostgreSQL URL
 load_dotenv()
 
 # PostgreSQL Connection
