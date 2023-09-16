@@ -35,7 +35,7 @@ app = Flask(__name__)
 # Home Page
 @app.route("/")
 def home():
-    return "<h3>This api receives product reviews and ratings, and stores them in a PostgreSQL database.<h3>"
+    return "<h3>This api receives JSON product reviews and ratings, and stores them in a PostgreSQL database.<h3>"
 
 # Add Product
 # Example: {"name": "Product Name"}
