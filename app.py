@@ -36,7 +36,7 @@ app = Flask(__name__)
 # Home Page
 @app.route("/")
 def home():
-    return "<h3>This api receives JSON product reviews and ratings, and stores them in a PostgreSQL database.<h3>"
+    return render_template("index.html")
 
 # Add Product
 # JSON Example: {"name": "Product Name"}
@@ -145,4 +145,5 @@ def get_reviews(product_id):
 
 ## next steps would be to add a user table and column to authenticate the reviews
 ## and add more info to products themselves, like price, description, etc.
-## another nice step is to add a frontend to the api, using flask_bootstratp for example
+## another nice step is to add a frontend to the api, like the one i've started
+## adding on "visual-products" route, using flask_bootstrap for example
