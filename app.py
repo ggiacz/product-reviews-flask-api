@@ -2,7 +2,7 @@ import os # OS Module
 import psycopg2 # PostgreSQL Connector
 from datetime import datetime, timezone # Datetime Module
 from dotenv import load_dotenv # .env file reader
-from flask import Flask, request # Flask Web Framework
+from flask import Flask, request, render_template # Flask Web Framework
 
 # PostgreSQL Queries
 
@@ -109,7 +109,8 @@ def get_products():
         with connection.cursor() as cursor:
             cursor.execute("SELECT * FROM products;")
             products = cursor.fetchall()
-    return {"products": products}, 200
+#    return {"products": products}, 200
+    return render_template("index.html", products=products)
 
 # Rename Product
 # JSON Example: {"name": "New Product Name"}
