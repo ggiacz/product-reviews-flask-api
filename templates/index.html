@@ -14,60 +14,41 @@
     <!-- navbar -->
     <div class="container">
         <h1>Documentação</h1>
-        <p>resumo</p>
+        <p>Minimal Flask API em Python que hospeda avaliaçÕes de produtos em um banco de dados PostgreSQL. Seu principal
+            objetivo é armazenar as notas e os comentários sobre determinados produtos. É necessário uma ferramenta para
+            fornecer enviar comandos http e arquivos JSON ao banco de dados. Recomendo Insomnia, ferramenta que foi
+            utilizada no desenvolvimento. As rotas estão documentadas logo abaixo.</p>
         <br>
-        <p>resumo2</p>
+        <p>Os próximos passos do desenvolvimento seriam adicionar uma forma de autenticação e vincular os usuários aos
+            seus reviews, além de criar uma interface visual.</p>
         <br>
-        <h2>teste</h2>
-                <ul><b>Introdução</b></ul>
-                <ul>Descrição</ul>
-                <ul>Propósito</ul>
-                <ul>Próximos Passos</ul>
-                <br>
-                <ul><b>Recursos</b></ul>
-                <ul>Adicionar</ul>
-                <ul>Ler</ul>
-                <ul>Editar</ul>
-                <ul>Deletar</ul>
-                <br>
-                <ul><b>Tecnologias</b></ul>
-                <ul>Flask</ul>
-                <ul>Git</ul>
-                <ul>ElephantSQL</ul>
-                <ul>Render.com</ul>
-                <ul>Insomnia</ul>
-                <ul>Bibliotecas</ul>
-                <h1>Product Review API</h1>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf ara avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faeara avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad fae</p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
-                <h2>Recursos</h2>
-                <p>API para avaliação de aaaaaautos</p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
-                <h2>Tecnologias</h2>
-                <p>API para avaliação de aaaaaaaaaaaaarodutos</p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
-                <p>API para avaliação de testabdi 123 qusaero dsad faedesf testabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesftestabdi 123 qusaero dsad faedesf </p>
-                <br>
+        <h2>Recursos</h2>
+        <h4>LÊ A LISTA GERAL DE PRODUTOS: https://product-review-flask-api.onrender.com/api/products</h4>
+        <p>Para muitos dos recursos abaixo é necessário um id de produto. É possível adquirir o id do produto desejado
+            por este recurso. Para utilizá-los, substitua "id-do-produto" pelo valor do id. </p>
+        <h4>ADICIONA PRODUTO: https://product-review-flask-api.onrender.com/api/reviews</h4>
+        <p>Recebe um arquivo JSON e adiciona um produto a lista de produtos.
+            Examplo de entrada: {"name": "Product Name"}</p>
+        <h4>ADICIONA UM REVIEW A UM PRODUTO: https://product-review-flask-api.onrender.com/api/reviews</h4>
+        <p>Recebe um arquivo JSON e adiciona um review a um determinado produto. Examplo de entrada: {"product": 1,
+            "rating": 4.5, "date": "01-01-2021 00:00:00", "feedback": "This is a review."} *A data é opcional</p>
+        <h4>LÊ A QUANTIDADE TOTAL DE REVIEWS: https://product-review-flask-api.onrender.com/api/total-reviews</h4>
+        <h4>LÊ AS INFORMAÇÕES DE UM DETERMINADO PRODUTO:
+            https://product-review-flask-api.onrender.com/api/product/id-do-produto</h4>
+        <p>Retorna informações relevantes sobre o produto com o id escolhido.</p>
+        <h4>LÊ LISTA DE REVIEWS DE DETERMINADO PRODUTO:
+            https://product-review-flask-api.onrender.com/api/reviews/id-do-produto</h4>
+        <h4>VISUALIZAR LISTA DE PRODUTOS: https://product-review-flask-api.onrender.com/api/visual-products</h4>
+        <h4>RENOMEIA PRODUTO: https://product-review-flask-api.onrender.com/api/product/id-do-produto</h4>
+        <p>Recebe um arquivo JSON e renomeia um produto com o id escolhido.
+            Examplo de entrada: {"name": "New Product Name"}</p>
+        <h4>DELETA PRODUTO: https://product-review-flask-api.onrender.com/api/product/id-do-produto</h4>
+        <p>Deleta o produto com o id escolhido.</p>
 
-        </div>
+
+
+
+    </div>
 </body>
 
 </html>
