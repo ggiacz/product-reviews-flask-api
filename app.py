@@ -110,10 +110,15 @@ def get_products():
         with connection.cursor() as cursor:
             cursor.execute("SELECT * FROM products;")
             products = cursor.fetchall()
-            products_names = [product[1] for product in products]
-
+            products_names = ["joao", "jose", "maria"]
+    # cria uma lista com os nomes joao jose e maria
 #    return {"products": products}, 200
     return render_template("index.html", products=products_names)
+
+
+
+
+
 
 # Rename Product
 # JSON Example: {"name": "New Product Name"}
@@ -139,3 +144,4 @@ def get_reviews(product_id):
 
 ## next steps would be to add a user table and column to authenticate the reviews
 ## and add more info to products themselves, like price, description, etc.
+## another nice step is to add a frontend to the api, using flask_bootstratp for example

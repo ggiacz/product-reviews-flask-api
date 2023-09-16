@@ -1,5 +1,14 @@
-<ul>
-    {% for product in products %}
-        <li>{{ product.name }}</li>
-    {% endfor %}
-</ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minha página</title>
+  </head>
+  <body>
+    <h1>Minha lista:</h1>
+    <ul>
+      {% for product in products %}
+        <li>{{ product }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
