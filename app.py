@@ -38,7 +38,7 @@ def home():
     return "<h3>This api receives JSON product reviews and ratings, and stores them in a PostgreSQL database.<h3>"
 
 # Add Product
-# Example: {"name": "Product Name"}
+# JSON Example: {"name": "Product Name"}
 @app.post("/api/products")
 def create_product():
     data = request.get_json()
@@ -51,7 +51,7 @@ def create_product():
     return {"id": product_id, "message": f"Product: {name} added to list."}, 201
 
 # Add Review
-# Example: {"product": 1, "rating": 4.5, "date": "01-01-2021 00:00:00", "feedback": "This is a review."} *date is optional
+# JSON Example: {"product": 1, "rating": 4.5, "date": "01-01-2021 00:00:00", "feedback": "This is a review."} *date is optional
 @app.post("/api/reviews")
 def add_temp():
     data = request.get_json()
@@ -112,7 +112,7 @@ def get_products():
     return {"products": products}, 200
 
 # Rename Product
-# Example: {"name": "New Product Name"}
+# JSON Example: {"name": "New Product Name"}
 @app.put("/api/product/<int:product_id>")
 def rename_product(product_id):
     data = request.get_json()
