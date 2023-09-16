@@ -110,15 +110,16 @@ def get_products():
         with connection.cursor() as cursor:
             cursor.execute("SELECT * FROM products;")
             products = cursor.fetchall()
-            products_names = ["joao", "jose", "maria"]
-    # cria uma lista com os nomes joao jose e maria
-#    return {"products": products}, 200
-    return render_template("index.html", products=products_names)
+    return {"products": products}, 200
 
-
-
-
-
+# Get Visual Products List
+@app.get("/api/visual-products")
+def get_visual_products():
+    with connection:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT * FROM products;")
+            products = cursor.fetchall()
+    return render_template("products.html", products=products)
 
 # Rename Product
 # JSON Example: {"name": "New Product Name"}
